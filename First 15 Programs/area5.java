@@ -6,6 +6,5 @@ public class area5 {
         float peri = 2 * pi * r;
         System.out.println("area of circle:"+area);
         System.out.println("periemeter of circle:"+peri); 
-    }
-    
+    }  
 }

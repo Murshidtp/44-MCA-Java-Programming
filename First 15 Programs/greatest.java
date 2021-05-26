@@ -12,6 +12,5 @@ public class greatest {
         else{
             System.out.println("biggest number is:"+c);
         }
-
     }
 }

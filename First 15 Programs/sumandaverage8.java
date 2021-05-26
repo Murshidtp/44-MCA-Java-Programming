@@ -8,7 +8,6 @@ public class sumandaverage8 {
         int sum=num1+num2+num3+num4+num5;
         int avg=(sum/5);
         System.out.println("sum of numbers:"+sum);
-        System.out.println("average:"+avg);
-        
+        System.out.println("average:"+avg);   
     }
 }
