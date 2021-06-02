@@ -1,5 +1,5 @@
 class product{
-    int pcode;
+    String pcode;
     String pname;
     int price;
 }
@@ -8,25 +8,25 @@ public class Program1 {
         product p1=new product();
         product p2=new product();
         product p3=new product();
-        p1.pcode=111;
-        p1.pname="toys";
-        p1.price=1500;
+        p1.pcode="p11";
+        p1.pname="Pen";
+        p1.price=10;
 
-        p2.pcode=112;
-        p2.pname="car";
-        p2.price=200;
+        p2.pcode="p12";
+        p2.pname="Book";
+        p2.price=20;
 
-        p3.pcode=113;
-        p3.pname="brush";
-        p3.price=500;
+        p3.pcode="p13";
+        p3.pname="Pencil";
+        p3.price=5;
         if(p1.price<p2.price && p1.price<p3.price){
-            System.out.println("toys have less price");
+            System.out.println(p1.pname+" have less price");
         }
         else if(p2.price<p1.price && p2.price<p3.price){
-            System.out.println("car have less price");
+            System.out.println(p2.pname+" have less price");
         }
         else{
-            System.out.println("brush have lowest price");
+            System.out.println(p3.pname+" have lowest price");
         }
     }
 }
