@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class PrintArray
 {
     public static void main(String[] args)
-        throws IOException{ 
+        throws IOException
+        { 
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in)) ;
         System.out.println("Enter the number of element in the array:");
         int n=Integer.parseInt(br.readLine());
