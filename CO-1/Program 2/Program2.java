@@ -2,41 +2,61 @@
 
 import java.util.Scanner;
 
-class Matrix{
+class Matrix {
+    int col;
     int row;
-    int column;
+    int[][] matrix;
+
+    Matrix(int r, int c) {
+        col = c;
+        row = r;
+        matrix = new int[row][col];
+    }
+
+    void matrixCreation(Scanner read) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                matrix[i][j] = read.nextInt();
+            }
+        }
+    }
 }
-public class Program2{
+
+public class Program2 {
+
+    public static void addMatrix(Matrix m1, Matrix m2, Matrix result) {
+        for (int i = 0; i < m1.row; i++) {
+            for (int j = 0; j < m1.col; j++) {
+                result.matrix[i][j] = m1.matrix[i][j] + m2.matrix[i][j];
+            }
+        }
+    }
+
+    public static void displayMatrix(Matrix result) {
+        System.out.println("The metrix after adding given 2 matrices:");
+        for (int i = 0; i < result.row; i++) {
+            for (int j = 0; j < result.col; j++) {
+                System.out.print("\t" + result.matrix[i][j]);
+            }
+            System.out.print("\n");
+        }
+    }
+
     public static void main(String[] args) {
-        Matrix m = new Matrix();
-        Scanner s = new Scanner(System.in);
-        int i,j;
-        System.out.println("Enter number of rows:");
-        m.row=s.nextInt();
-        System.out.println("Enter number of columns:");
-        m.column=s.nextInt();
-        int[][] matrix1=new int[m.row][m.column];
-        int[][] matrix2=new int[m.row][m.column];
-        System.out.println("Enter the element of Matrix 1:");
-        for(i=0;i<m.row;i++){
-            for(j=0;j<m.column;j++)
-                matrix1[i][j]=s.nextInt();
-        }
-        System.out.println("Enter the element of Matrix 2:");
-        for(i=0;i<m.row;i++){
-            for(j=0;j<m.column;j++)
-                matrix2[i][j]=s.nextInt();
-        }
-        int[][] sum = new int[m.row][m.column];
-        for(i=0;i<m.row;i++){
-            for(j=0;j<m.column;j++)
-                sum[i][j] = matrix1[i][j]+matrix2[i][j];
-        } 
-        System.out.println("Sum of 2 Matrix:");
-        for(i=0;i<m.row;i++){
-            for(j=0;j<m.column;j++)
-                System.out.print(sum[i][j]+ "\t");
-          System.out.println();  
-        } 
+        int row, col;
+        Scanner read = new Scanner(System.in);
+        System.out.print("Enter Number of Rows:");
+        row = read.nextInt();
+        System.out.print("Enter Number of columns:");
+        col = read.nextInt();
+        Matrix m1 = new Matrix(row, col);
+        Matrix m2 = new Matrix(row, col);
+        Matrix result = new Matrix(row, col);
+        System.out.println("Enter the elements of matrix1:");
+        m1.matrixCreation(read);
+        System.out.println("Enter the elements of matrix2:");
+        m2.matrixCreation(read);
+        addMatrix(m1, m2,result);
+        displayMatrix(result);
     }
 }
