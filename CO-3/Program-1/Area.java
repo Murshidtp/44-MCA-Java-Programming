@@ -35,9 +35,9 @@ class Circle extends Shape{
 class Area{
 	public static void main(String ar[]){
 		
-		Rectangle r=new Rectangle(4,5);
+		Rectangle r=new Rectangle(8,6);
 		Square s=new Square(4);
-		Circle c=new Circle(2);
+		Circle c=new Circle(3);
 		Shape ref;
 		ref=r;
 		r.area(4,5);

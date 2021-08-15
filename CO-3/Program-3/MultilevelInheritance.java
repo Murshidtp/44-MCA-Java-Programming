@@ -71,7 +71,7 @@ class Teacher extends Employee{
 		System.out.println();
 	}
 }
-class MultilevelInheritance{
+class MultilevelInheritence{
 	public static void main(String ar[]){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the no. of teachers");

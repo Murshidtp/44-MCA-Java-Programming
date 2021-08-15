@@ -48,11 +48,10 @@ class BooksInfo{
 	public static void main(String ar[]){
 		Literature obl=new Literature("Prakash Books","The Story of My Experiments with Truth","An autobiography of Mahathma Gandhi");
 		Fiction obf=new Fiction("Random house USA","Anna karenina","Leo Tolstoy");
-		System.out.println("---------------------------------------");
 		System.out.println("Literature");
 		System.out.println("---------------------------------------");
 		obl.display();
-		System.out.println("---------------------------------------");
+		System.out.println();
 		System.out.println("Fiction");
 		System.out.println("---------------------------------------");
 		obf.display();
